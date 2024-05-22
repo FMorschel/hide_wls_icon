@@ -1,4 +1,4 @@
-name: hide_wls_icon
+name: hide_wsl_icon
 description: A simple command-line application for hiding the WSL icon from the Desktop.
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo

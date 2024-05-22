@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:hide_wls_icon/message.dart';
+import 'package:hide_wsl_icon/message.dart';
 import 'package:win32_registry/win32_registry.dart';
 
 void main(List<String> arguments) async {
