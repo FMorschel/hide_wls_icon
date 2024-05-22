@@ -5,6 +5,9 @@ import 'package:hide_wls_icon/message.dart';
 import 'package:win32_registry/win32_registry.dart';
 
 void main(List<String> arguments) async {
+  // If program has argument --no-message-box, don't show message box
+  bool showMessageBox = !arguments.contains('--no-message-box');
+
   const keyPath = r'Software\Microsoft\Windows\CurrentVersion'
       r'\Explorer\HideDesktopIcons\NewStartPanel';
 
@@ -18,7 +21,7 @@ void main(List<String> arguments) async {
 
   MessageBox? msg;
   try {
-    msg = MessageBox();
+    if (showMessageBox) msg = MessageBox();
   } catch (e) {
     print('Error: $e');
   }
